@@ -8,29 +8,37 @@
   <title>NEURORELIC // In Development</title>
   <link rel="icon" type="image/png" href="./assets/favicon.png" />
   <link rel="stylesheet" href="./style.css" />
+  <style>
+    .hero-status { display:flex; align-items:center; gap:18px; }
+    .language-switch { display:flex; align-items:center; gap:7px; color:#8296a4; }
+    .language-switch button { appearance:none; border:0; padding:0; background:none; color:inherit; font:inherit; cursor:pointer; transition:color 200ms ease,text-shadow 200ms ease; }
+    .language-switch button:hover,.language-switch button.active { color:var(--cyan); text-shadow:0 0 10px rgba(53,220,232,.4); }
+    .language-switch .separator { opacity:.45; }
+    @media (max-width:520px) { .hero-status { gap:10px; } .language-switch { gap:5px; } }
+  </style>
 </head>
 <body id="top">
   <main>
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-topline" aria-hidden="true"><span>NR // 001</span><span>PROJECT STATUS: ACTIVE</span></div>
+      <div class="hero-topline"><span aria-hidden="true">NR // 001</span><div class="hero-status"><span data-i18n="projectStatus">PROJECT STATUS: ACTIVE</span><div class="language-switch" aria-label="Language"><button type="button" data-lang="en" class="active">EN</button><span class="separator">/</span><button type="button" data-lang="pl">PL</button></div></div></div>
       <div class="hero-content">
         <div class="hero-logo-frame"><img src="./assets/neuro-relic-logo.png" alt="NeuroRelic" class="hero-logo" /></div>
         <div class="hero-copy">
-          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span>TRANSMISSION RECEIVED</p>
-          <h1 id="hero-title">NEURORELIC <span>// IN DEVELOPMENT</span></h1>
-          <p class="hero-description">A third-person sci-fi action-adventure about exploration, fast-paced combat and the mysteries left behind by a world of machines.</p>
-          <a class="access-link" href="#transmission">ACCESS TRANSMISSION <span aria-hidden="true">↓</span></a>
+          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span><span data-i18n="transmissionReceived">TRANSMISSION RECEIVED</span></p>
+          <h1 id="hero-title">NEURORELIC <span data-i18n="inDevelopment">// IN DEVELOPMENT</span></h1>
+          <p class="hero-description" data-i18n="heroDescription">A third-person sci-fi action-adventure about exploration, fast-paced combat and the mysteries left behind by a world of machines.</p>
+          <a class="access-link" href="#transmission"><span data-i18n="accessTransmission">ACCESS TRANSMISSION</span> <span aria-hidden="true">↓</span></a>
         </div>
       </div>
-      <div class="hero-bottomline" aria-hidden="true"><span>SCROLL TO DECODE</span><span>01 / 07</span></div>
+      <div class="hero-bottomline" aria-hidden="true"><span data-i18n="scrollDecode">SCROLL TO DECODE</span><span>01 / 07</span></div>
     </section>
 
     <section class="showcase-section transmission" id="transmission" aria-labelledby="transmission-title">
       <div class="section-inner split-layout">
         <div class="section-meta"><span class="section-number">01 / 07</span><p class="eyebrow">TRANSMISSION // 001</p></div>
         <div class="section-content">
-          <h2 id="transmission-title">A WORLD THAT<br><em>REMEMBERS</em></h2>
-          <p class="section-description">Rhea Nox explores a fractured world shaped by machines, abandoned infrastructure and signals that refuse to stay silent. With Glimmer at her side, every discovery brings her closer to understanding what happened here — and what is still waiting beneath the surface.</p>
+          <h2 id="transmission-title" data-i18n="worldTitle">A WORLD THAT<br><em>REMEMBERS</em></h2>
+          <p class="section-description" data-i18n="worldDescription">Rhea Nox explores a fractured world shaped by machines, abandoned infrastructure and signals that refuse to stay silent. With Glimmer at her side, every discovery brings her closer to understanding what happened here — and what is still waiting beneath the surface.</p>
         </div>
       </div>
     </section>
@@ -39,8 +47,8 @@
       <div class="section-inner split-layout">
         <div class="section-meta"><span class="section-number">02 / 07</span><p class="eyebrow">SUBJECT // RHEA NOX</p></div>
         <div class="section-content">
-          <h2 id="rhea-title">STATUS <span class="title-divider">//</span> <em>ACTIVE</em></h2>
-          <p class="section-description">Rhea is not alone. Accompanied by Glimmer, a small drone linked to her journey, she moves through hostile territory, forgotten settlements and places where the rules of the world begin to break down.</p>
+          <h2 id="rhea-title" data-i18n="rheaTitle">STATUS <span class="title-divider">//</span> <em>ACTIVE</em></h2>
+          <p class="section-description" data-i18n="rheaDescription">Rhea is not alone. Accompanied by Glimmer, a small drone linked to her journey, she moves through hostile territory, forgotten settlements and places where the rules of the world begin to break down.</p>
           <div class="signal-rule" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
         </div>
       </div>
@@ -48,13 +56,13 @@
 
     <section class="showcase-section systems" id="systems" aria-labelledby="systems-title">
       <div class="section-inner">
-        <div class="section-heading"><div class="section-meta"><span class="section-number">03 / 07</span><p class="eyebrow">NEURAL SYSTEMS // ONLINE</p></div><h2 id="systems-title">ADAPT. DISRUPT.<br><em>SURVIVE.</em></h2></div>
+        <div class="section-heading"><div class="section-meta"><span class="section-number">03 / 07</span><p class="eyebrow">NEURAL SYSTEMS // ONLINE</p></div><h2 id="systems-title" data-i18n="systemsTitle">ADAPT. DISRUPT.<br><em>SURVIVE.</em></h2></div>
         <div class="system-grid">
-          <article class="system-card"><span class="card-index">01 // PULSE</span><p>Distort enemy perception of time and create an opening when the fight turns against you.</p><span class="card-mark" aria-hidden="true">+</span></article>
-          <article class="system-card"><span class="card-index">02 // OVERDRIVE</span><p>Push Rhea beyond her normal limits and turn speed into an offensive advantage.</p><span class="card-mark" aria-hidden="true">+</span></article>
-          <article class="system-card"><span class="card-index">03 // SHOCKWAVE</span><p>Release a disruptive neural burst across the surrounding area and overwhelm nearby threats.</p><span class="card-mark" aria-hidden="true">+</span></article>
+          <article class="system-card"><span class="card-index">01 // PULSE</span><p data-i18n="pulse">Distort enemy perception of time and create an opening when the fight turns against you.</p><span class="card-mark" aria-hidden="true">+</span></article>
+          <article class="system-card"><span class="card-index">02 // OVERDRIVE</span><p data-i18n="overdrive">Push Rhea beyond her normal limits and turn speed into an offensive advantage.</p><span class="card-mark" aria-hidden="true">+</span></article>
+          <article class="system-card"><span class="card-index">03 // SHOCKWAVE</span><p data-i18n="shockwave">Release a disruptive neural burst across the surrounding area and overwhelm nearby threats.</p><span class="card-mark" aria-hidden="true">+</span></article>
         </div>
-        <p class="systems-note">Recover Neural Data. Upgrade your systems. Change how Rhea approaches combat.</p>
+        <p class="systems-note" data-i18n="systemsNote">Recover Neural Data. Upgrade your systems. Change how Rhea approaches combat.</p>
       </div>
     </section>
 
@@ -62,9 +70,9 @@
       <div class="section-inner split-layout">
         <div class="section-meta"><span class="section-number">04 / 07</span><p class="eyebrow">WORLD // SIGNAL FRAGMENTS</p></div>
         <div class="section-content">
-          <h2 id="world-title">FOLLOW WHAT WAS<br><em>LEFT BEHIND</em></h2>
-          <ul class="fragment-list" aria-label="World fragments"><li>ABANDONED INFRASTRUCTURE</li><li>MACHINE SETTLEMENTS</li><li>ANOMALOUS STRUCTURES</li><li>HOSTILE UNITS</li><li>LOST SIGNALS</li></ul>
-          <p class="section-description">Explore interconnected spaces, uncover hidden routes and investigate traces of the machines that came before. Some will help. Some will attack. Others may not be what they first appear to be.</p>
+          <h2 id="world-title" data-i18n="fragmentsTitle">FOLLOW WHAT WAS<br><em>LEFT BEHIND</em></h2>
+          <ul class="fragment-list"><li data-i18n="fragment1">ABANDONED INFRASTRUCTURE</li><li data-i18n="fragment2">MACHINE SETTLEMENTS</li><li data-i18n="fragment3">ANOMALOUS STRUCTURES</li><li data-i18n="fragment4">HOSTILE UNITS</li><li data-i18n="fragment5">LOST SIGNALS</li></ul>
+          <p class="section-description" data-i18n="fragmentsDescription">Explore interconnected spaces, uncover hidden routes and investigate traces of the machines that came before. Some will help. Some will attack. Others may not be what they first appear to be.</p>
         </div>
       </div>
     </section>
@@ -73,18 +81,18 @@
       <div class="section-inner split-layout">
         <div class="section-meta"><span class="section-number">05 / 07</span><p class="eyebrow">COMBAT // ENGAGED</p></div>
         <div class="section-content">
-          <h2 id="combat-title">CLOSE THE<br><em>DISTANCE</em></h2>
-          <p class="section-description">Fast melee combat combines sword attacks, blocking, evasive movement and finishers with Rhea’s Neural Systems. Read the enemy, create an opening and take control of the encounter.</p>
+          <h2 id="combat-title" data-i18n="combatTitle">CLOSE THE<br><em>DISTANCE</em></h2>
+          <p class="section-description" data-i18n="combatDescription">Fast melee combat combines sword attacks, blocking, evasive movement and finishers with Rhea’s Neural Systems. Read the enemy, create an opening and take control of the encounter.</p>
         </div>
       </div>
     </section>
 
     <section class="showcase-section development" id="development" aria-labelledby="development-title">
       <div class="section-inner split-layout">
-        <div class="section-meta"><span class="section-number">06 / 07</span><p class="eyebrow">PROJECT STATUS // ACTIVE DEVELOPMENT</p></div>
+        <div class="section-meta"><span class="section-number">06 / 07</span><p class="eyebrow" data-i18n="developmentStatus">PROJECT STATUS // ACTIVE DEVELOPMENT</p></div>
         <div class="section-content">
-          <h2 id="development-title">DEVELOPED<br><em>SOLO</em></h2>
-          <p class="section-description">NEURORELIC is an independent solo-developed project by Kamil Krajewski, built with Unreal Engine 5.</p>
+          <h2 id="development-title" data-i18n="developmentTitle">DEVELOPED<br><em>SOLO</em></h2>
+          <p class="section-description" data-i18n="developmentDescription">NEURORELIC is an independent solo-developed project by Kamil Krajewski, built with Unreal Engine 5.</p>
         </div>
       </div>
     </section>
@@ -92,7 +100,7 @@
 
   <footer class="footer" id="contact">
     <div class="section-inner">
-      <div class="footer-heading"><p class="eyebrow">07 / 07 &nbsp; // &nbsp; END OF TRANSMISSION</p><a href="#top" class="back-top">BACK TO TOP <span aria-hidden="true">↑</span></a></div>
+      <div class="footer-heading"><p class="eyebrow" data-i18n="endTransmission">07 / 07 &nbsp; // &nbsp; END OF TRANSMISSION</p><a href="#top" class="back-top"><span data-i18n="backTop">BACK TO TOP</span> <span aria-hidden="true">↑</span></a></div>
       <img src="./assets/neuro-relic-logo.png" alt="NeuroRelic" class="footer-logo" />
       <div class="footer-bottom">
         <a href="mailto:contact@neurorelic.com" class="email">contact@neurorelic.com</a>
@@ -100,9 +108,45 @@
           <a href="https://youtube.com/@NeuroRelicGame" target="_blank" rel="noopener noreferrer" aria-label="NeuroRelic on YouTube"><img src="./assets/icons/youtube.svg" alt="" /></a>
           <a href="https://discord.gg/dAVgeBUfd" target="_blank" rel="noopener noreferrer" aria-label="Join NeuroRelic on Discord"><img src="./assets/icons/discord.svg" alt="" /></a>
         </div>
-        <p class="creator">Created by Kamil Krajewski</p>
+        <p class="creator" data-i18n="creator">Created by Kamil Krajewski</p>
       </div>
     </div>
   </footer>
+
+  <script>
+    const translations = {
+      en: {
+        projectStatus:'PROJECT STATUS: ACTIVE', transmissionReceived:'TRANSMISSION RECEIVED', inDevelopment:'// IN DEVELOPMENT',
+        heroDescription:'A third-person sci-fi action-adventure about exploration, fast-paced combat and the mysteries left behind by a world of machines.', accessTransmission:'ACCESS TRANSMISSION', scrollDecode:'SCROLL TO DECODE',
+        worldTitle:'A WORLD THAT<br><em>REMEMBERS</em>', worldDescription:'Rhea Nox explores a fractured world shaped by machines, abandoned infrastructure and signals that refuse to stay silent. With Glimmer at her side, every discovery brings her closer to understanding what happened here — and what is still waiting beneath the surface.',
+        rheaTitle:'STATUS <span class="title-divider">//</span> <em>ACTIVE</em>', rheaDescription:'Rhea is not alone. Accompanied by Glimmer, a small drone linked to her journey, she moves through hostile territory, forgotten settlements and places where the rules of the world begin to break down.',
+        systemsTitle:'ADAPT. DISRUPT.<br><em>SURVIVE.</em>', pulse:'Distort enemy perception of time and create an opening when the fight turns against you.', overdrive:'Push Rhea beyond her normal limits and turn speed into an offensive advantage.', shockwave:'Release a disruptive neural burst across the surrounding area and overwhelm nearby threats.', systemsNote:'Recover Neural Data. Upgrade your systems. Change how Rhea approaches combat.',
+        fragmentsTitle:'FOLLOW WHAT WAS<br><em>LEFT BEHIND</em>', fragment1:'ABANDONED INFRASTRUCTURE', fragment2:'MACHINE SETTLEMENTS', fragment3:'ANOMALOUS STRUCTURES', fragment4:'HOSTILE UNITS', fragment5:'LOST SIGNALS', fragmentsDescription:'Explore interconnected spaces, uncover hidden routes and investigate traces of the machines that came before. Some will help. Some will attack. Others may not be what they first appear to be.',
+        combatTitle:'CLOSE THE<br><em>DISTANCE</em>', combatDescription:'Fast melee combat combines sword attacks, blocking, evasive movement and finishers with Rhea’s Neural Systems. Read the enemy, create an opening and take control of the encounter.',
+        developmentStatus:'PROJECT STATUS // ACTIVE DEVELOPMENT', developmentTitle:'DEVELOPED<br><em>SOLO</em>', developmentDescription:'NEURORELIC is an independent solo-developed project by Kamil Krajewski, built with Unreal Engine 5.', endTransmission:'07 / 07 &nbsp; // &nbsp; END OF TRANSMISSION', backTop:'BACK TO TOP', creator:'Created by Kamil Krajewski'
+      },
+      pl: {
+        projectStatus:'STATUS PROJEKTU: AKTYWNY', transmissionReceived:'TRANSMISJA ODEBRANA', inDevelopment:'// W TRAKCIE PRODUKCJI',
+        heroDescription:'Trzecioosobowa przygodowa gra akcji science fiction o eksploracji, dynamicznej walce i tajemnicach pozostawionych przez świat maszyn.', accessTransmission:'OTWÓRZ TRANSMISJĘ', scrollDecode:'PRZEWIŃ, ABY ODCZYTAĆ',
+        worldTitle:'ŚWIAT, KTÓRY<br><em>PAMIĘTA</em>', worldDescription:'Rhea Nox przemierza podzielony świat ukształtowany przez maszyny, opuszczoną infrastrukturę i sygnały, które nie chcą zamilknąć. Z Glimmerem u boku każde odkrycie przybliża ją do zrozumienia, co wydarzyło się w tym miejscu — i co wciąż czeka pod powierzchnią.',
+        rheaTitle:'STATUS <span class="title-divider">//</span> <em>AKTYWNA</em>', rheaDescription:'Rhea nie jest sama. Towarzyszy jej Glimmer — niewielki dron związany z jej podróżą. Razem przemierzają wrogie tereny, zapomniane osady i miejsca, w których zasady tego świata zaczynają się rozpadać.',
+        systemsTitle:'DOSTOSUJ SIĘ. ZAKŁÓĆ.<br><em>PRZETRWAJ.</em>', pulse:'Zaburz postrzeganie czasu przez przeciwników i stwórz sobie okazję, gdy walka zaczyna wymykać się spod kontroli.', overdrive:'Przekrocz normalne możliwości Rhei i zamień szybkość w przewagę ofensywną.', shockwave:'Uwolnij zakłócający impuls neuralny w otoczeniu i obezwładnij pobliskie zagrożenia.', systemsNote:'Zdobywaj Neural Data. Ulepszaj systemy. Zmieniaj sposób, w jaki Rhea podchodzi do walki.',
+        fragmentsTitle:'PODĄŻAJ ZA TYM,<br><em>CO POZOSTAŁO</em>', fragment1:'OPUSZCZONA INFRASTRUKTURA', fragment2:'OSADY MASZYN', fragment3:'ANOMALNE STRUKTURY', fragment4:'WROGIE JEDNOSTKI', fragment5:'UTRACONE SYGNAŁY', fragmentsDescription:'Eksploruj połączone ze sobą obszary, odkrywaj ukryte przejścia i badaj ślady maszyn, które były tu wcześniej. Niektóre pomogą. Niektóre zaatakują. Inne mogą nie być tym, czym wydają się na pierwszy rzut oka.',
+        combatTitle:'SKRÓĆ<br><em>DYSTANS</em>', combatDescription:'Dynamiczna walka w zwarciu łączy ataki mieczem, blokowanie, uniki i finishery z Neural Systems Rhei. Obserwuj przeciwnika, twórz okazje i przejmuj kontrolę nad starciem.',
+        developmentStatus:'STATUS PROJEKTU // AKTYWNA PRODUKCJA', developmentTitle:'TWORZONE<br><em>SOLO</em>', developmentDescription:'NEURORELIC to niezależny projekt tworzony solo przez Kamila Krajewskiego w Unreal Engine 5.', endTransmission:'07 / 07 &nbsp; // &nbsp; KONIEC TRANSMISJI', backTop:'WRÓĆ NA GÓRĘ', creator:'Stworzone przez Kamila Krajewskiego'
+      }
+    };
+
+    function setLanguage(lang) {
+      if (!translations[lang]) lang = 'en';
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-i18n]').forEach(el => { const value = translations[lang][el.dataset.i18n]; if (value !== undefined) el.innerHTML = value; });
+      document.querySelectorAll('[data-lang]').forEach(button => { const active = button.dataset.lang === lang; button.classList.toggle('active', active); button.setAttribute('aria-pressed', active); });
+      localStorage.setItem('neurorelic-language', lang);
+    }
+
+    document.querySelectorAll('[data-lang]').forEach(button => button.addEventListener('click', () => setLanguage(button.dataset.lang)));
+    setLanguage(localStorage.getItem('neurorelic-language') || 'en');
+  </script>
 </body>
 </html>
